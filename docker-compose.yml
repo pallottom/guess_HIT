@@ -21,7 +21,15 @@ services:
       - db
     build: lyrics_collector/
     volumes:
-      - ./lyrics_collector/:/lyrics
+      - ./lyrics_collector/:/lyrics_collector/
+
+  etl:
+    platform: linux/amd64
+    depends_on:
+      - db
+    build: etl/
+    volumes:
+      - ./etl/:/etl
 
 volumes:
   db:
