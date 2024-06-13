@@ -1,7 +1,7 @@
-from sqlalchemy import create_engine, insert, text, Column, String, Integer
+from sqlalchemy import create_engine, Column, String, Integer
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
-from functions import request_song_url_from_artist, scrape_song_lyrics
+from lyrics_collector.functions_collector import request_song_url_from_artist, scrape_song_lyrics
 import time
 
 time.sleep(3)
